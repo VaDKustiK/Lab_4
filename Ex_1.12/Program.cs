@@ -3,7 +3,7 @@ using System.Text;
 
 Console.OutputEncoding = Encoding.UTF8;
 
-int n = 3, m = 3;
+int n = 6, m = 7;
 int[,] A = new int[n, m];
 
 Console.WriteLine("Введите значения матрицы");
