@@ -30,8 +30,6 @@ for (int i = 0; i < n; i++)
         }
     }
 }
-Console.WriteLine($"max1 = {max1}");
-Console.WriteLine($"I = {I}, J = {J}");
 
 n--;
 for (int i = I; i < n; i++)
