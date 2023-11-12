@@ -2,7 +2,7 @@
 using System.Text;
 Console.OutputEncoding = Encoding.UTF8;
 
-int n = 4, m = 4; // n = 5, m = 7
+int n = 5, m = 7;
 int[,] F = new int[n, m];
 
 Console.WriteLine("Введите значения матрицы");
