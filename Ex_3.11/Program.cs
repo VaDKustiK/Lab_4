@@ -28,7 +28,6 @@ for (int i = 0; i < n; i++)
 }
 Console.WriteLine();
 
-int count = 0;
 int[] ind = new int[n];
 for (int i = 0; i < n; i++)
 {
@@ -39,30 +38,25 @@ for (int i = 0; i < n; i++)
             if (A[0, j] == 0)
             {
                 ind[0] = 1;
-                count++;
                 break;
             }
         }
         else if (A[i, j] == 0 & i != 0)
         {
             ind[i] = i;
-            count++;
             break;
         }
     }
 }
 
-Console.WriteLine("[{0}]", string.Join(", ", ind));
-
-int ncount = n - count;
-for (int i = 0; i < ncount; i++)
+for (int i = 0; i < n; i++)
 {
-    for (int j = 0; j < m; j++)
+    if (ind[i] == 0)
     {
-        if (ind[i] == 0)
+        for (int j = 0; j < m; j++)
+        {
             Console.Write(A[i, j] + " ");
-        else
-            ncount++;
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
 }
