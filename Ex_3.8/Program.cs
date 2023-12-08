@@ -1,11 +1,23 @@
 ﻿int n = 7, m = 5;
-int[,] A = new int[7, 5] { {-5, -4, -3, -2, -1},
-                                 {-4, -3, -2, -1, 0},
-                                 {-3, -2, -1, 0, 1},
-                                 {-2, -1, 0, 1, 2},
-                                 {-1, 0, 1, 2, 3},
-                                 {0, 1, 2, 3, 4},
-                                 {1, 2, 3, 4, 5} };
+int[,] A = new int[n, m];
+Random r = new Random();
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < m; j++)
+    {
+        A[i, j] = r.Next(-10, 10);
+    }
+}
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < m; j++)
+    {
+        Console.Write(A[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+
 int[] s = new int[n];
 int[] ind = new int[n];
 for (int i = 0; i < n; i++)
